@@ -15,6 +15,7 @@
 		9CBE459024E82E1500B8311F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CBE458E24E82E1500B8311F /* LaunchScreen.storyboard */; };
 		9CBE459B24E82E1600B8311F /* Swift5MapAndProtocol1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE459A24E82E1600B8311F /* Swift5MapAndProtocol1Tests.swift */; };
 		9CBE45A624E82E1600B8311F /* Swift5MapAndProtocol1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE45A524E82E1600B8311F /* Swift5MapAndProtocol1UITests.swift */; };
+		9CBE45B424E82E6800B8311F /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE45B324E82E6800B8311F /* NextViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9CBE45A124E82E1600B8311F /* Swift5MapAndProtocol1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Swift5MapAndProtocol1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CBE45A524E82E1600B8311F /* Swift5MapAndProtocol1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift5MapAndProtocol1UITests.swift; sourceTree = "<group>"; };
 		9CBE45A724E82E1600B8311F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CBE45B324E82E6800B8311F /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				9CBE458524E82E1100B8311F /* SceneDelegate.swift */,
 				9CBE458724E82E1100B8311F /* ViewController.swift */,
 				9CBE458924E82E1100B8311F /* Main.storyboard */,
+				9CBE45B324E82E6800B8311F /* NextViewController.swift */,
 				9CBE458C24E82E1500B8311F /* Assets.xcassets */,
 				9CBE458E24E82E1500B8311F /* LaunchScreen.storyboard */,
 				9CBE459124E82E1500B8311F /* Info.plist */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CBE458824E82E1100B8311F /* ViewController.swift in Sources */,
+				9CBE45B424E82E6800B8311F /* NextViewController.swift in Sources */,
 				9CBE458424E82E1100B8311F /* AppDelegate.swift in Sources */,
 				9CBE458624E82E1100B8311F /* SceneDelegate.swift in Sources */,
 			);
@@ -443,7 +447,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = app.matsushima.mukku.Swift5MapAndProtocol1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -460,7 +464,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = app.matsushima.mukku.Swift5MapAndProtocol1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
