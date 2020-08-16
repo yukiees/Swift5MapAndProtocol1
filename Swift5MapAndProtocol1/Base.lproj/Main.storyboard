@@ -21,17 +21,22 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
                                 <state key="normal" title="設定"/>
                                 <connections>
-                                    <segue destination="WDS-lh-ADf" kind="presentation" modalPresentationStyle="fullScreen" id="J3F-hZ-6xv"/>
+                                    <action selector="goToSearchVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XCA-t6-GLM"/>
+                                    <segue destination="WDS-lh-ADf" kind="presentation" identifier="next" modalPresentationStyle="fullScreen" id="J3F-hZ-6xv"/>
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mZR-Za-9aa">
                                 <rect key="frame" x="0.0" y="78" width="414" height="472"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="d9d-7Z-WEr" appends="YES" id="0Or-KT-VvL"/>
+                                </connections>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="住所" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCP-v2-zmX">
-                                <rect key="frame" x="74" y="588" width="266" height="128"/>
+                                <rect key="frame" x="35" y="588" width="346" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -39,8 +44,19 @@
                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="qCP-v2-zmX" id="1x6-TO-eg5"/>
+                        <outlet property="longPress" destination="d9d-7Z-WEr" id="qBj-7S-cPp"/>
+                        <outlet property="mapView" destination="mZR-Za-9aa" id="R6w-D3-mVT"/>
+                        <outlet property="settingButton" destination="zT5-Ig-lFI" id="9Nq-hg-nKy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="d9d-7Z-WEr">
+                    <connections>
+                        <action selector="longPressTap:" destination="BYZ-38-t0r" id="bc9-h1-Dt7"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-57.971014492753625" y="118.52678571428571"/>
         </scene>
@@ -83,11 +99,18 @@
                                 <state key="normal" title="OK">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="okAction:" destination="WDS-lh-ADf" eventType="touchUpInside" id="RdJ-gt-8XL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="8TU-xK-Hcm"/>
                     </view>
+                    <connections>
+                        <outlet property="IdoTextField" destination="iHP-zu-9n5" id="l9e-5X-xLR"/>
+                        <outlet property="KeidoTextField" destination="hP5-tK-RLp" id="9Ju-pJ-bdD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rRZ-BD-hvw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
